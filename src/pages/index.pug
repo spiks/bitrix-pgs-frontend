@@ -1,0 +1,18 @@
+extends /template/pug/layouts/main.pug
+
+include /template/pug/meta/header.pug
+include /template/pug/meta/footer.pug
+
+include /utils/pug/img.pug
+
+include /components/newsListExample/template.pug
+
+block title
+  title Главная
+
+block body
+  +HeaderComponent()
+
+  +NewsListComponent()
+
+  +FooterComponent()
