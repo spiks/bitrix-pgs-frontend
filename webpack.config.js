@@ -120,7 +120,7 @@ const config = {
       '@': PATHS.src,
       '@template': `${PATHS.src}/template`,
       '@utils': `${PATHS.src}/utils`,
-      '@blocks': `${PATHS.src}/blocks`,
+      '@components': `${PATHS.src}/components`,
       '@modules': `${PATHS.src}/modules`,
     }
   },

@@ -17,8 +17,8 @@
           ["@", "./src"],
           ["@template", "./src/template"],
           ["@utils", "./src/utils"],
-          ["@blocks", "./src/blocks"],
-          ["@module", "./src/module"]
+          ["@components", "./src/components"],
+          ["@modules", "./src/modules"]
         ]
       }
     }
