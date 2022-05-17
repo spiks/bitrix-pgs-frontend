@@ -3,11 +3,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const RemovePlugin = require('remove-files-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
   dist: path.join(__dirname, 'local/templates/main'),
-  assets: 'assets'
+  assets: 'assets',
 }
 
 const PAGES_DIR = path.join(__dirname, 'src/pages');
@@ -45,10 +46,20 @@ const getComponentsEntryPoints = () => {
   const entryPointsMap = {};
 
   componentsDirs.forEach((componentDir) => {
-    const [componentDirName] = componentDir.split('.');
+    const [dirName] = componentDir.split('.');
 
-    if (!entryPointsMap[componentDirName]) {
-      entryPointsMap[componentDirName] = path.join(__dirname, `src/components/${componentDirName}/script.js`);
+    const scriptEntryPointName = `${dirName}.scripts`;
+    const scriptEntryPointFilePath = path.join(__dirname, `src/components/${dirName}/script.js`);
+    
+    const styleEntryPointName = `${dirName}.styles`;
+    const styleEntryPointFilePath = path.join(__dirname, `src/components/${dirName}/style.js`);
+
+    if (fs.existsSync(scriptEntryPointFilePath) && !entryPointsMap[scriptEntryPointName]) {
+      entryPointsMap[scriptEntryPointName] = scriptEntryPointFilePath;
+    }
+
+    if (fs.existsSync(styleEntryPointFilePath) && !entryPointsMap[styleEntryPointFilePath]) {
+      entryPointsMap[styleEntryPointName] = styleEntryPointFilePath;
     }
   });
 
@@ -62,10 +73,20 @@ const getVendorsEntryPoints = () => {
   const entryPointsMap = {};
 
   vendorsDirs.forEach((vendorDir) => {
-    const [vendorDirName] = vendorDir.split('.');
+    const [dirName] = vendorDir.split('.');
 
-    if (!entryPointsMap[vendorDirName]) {
-      entryPointsMap[vendorDirName] = path.join(__dirname, `src/vendors/${vendorDirName}/script.js`);
+    const scriptEntryPointName = `${dirName}.scripts`;
+    const scriptEntryPointFilePath = path.join(__dirname, `src/vendors/${dirName}/script.js`);
+    
+    const styleEntryPointName = `${dirName}.styles`;
+    const styleEntryPointFilePath = path.join(__dirname, `src/vendors/${dirName}/style.js`);
+
+    if (fs.existsSync(scriptEntryPointFilePath) && !entryPointsMap[scriptEntryPointName]) {
+      entryPointsMap[scriptEntryPointName] = scriptEntryPointFilePath;
+    }
+
+    if (fs.existsSync(styleEntryPointFilePath) && !entryPointsMap[styleEntryPointFilePath]) {
+      entryPointsMap[styleEntryPointName] = styleEntryPointFilePath;
     }
   });
 
@@ -77,7 +98,8 @@ const config = {
   target: 'browserslist',
   entry: {
     ...getVendorsEntryPoints(),
-    template: `${PATHS.src}/template/template.js`,
+    'template.styles': `${PATHS.src}/template/template_styles.js`,
+    'template.scripts': `${PATHS.src}/template/template.js`,
     ...getComponentsEntryPoints(),
   },
   output: {
@@ -102,11 +124,25 @@ const config = {
       '@modules': `${PATHS.src}/modules`,
     }
   },
-  plugins: [
+  plugins: [    
     ...initMultipleHtmlPlugin(),
 
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}/css/[name]/[name].css`,
+    }),
+
+    new RemovePlugin({
+      after: {
+        root: './local/templates/main/assets',
+        test: [
+          {
+            folder: './js',
+            method: (absoluteItemPath) => {
+                return new RegExp(/\.styles/, 'm').test(absoluteItemPath);
+            }
+          },
+        ]
+      }
     }),
   ],
   module: {
@@ -178,7 +214,6 @@ const config = {
       new ImageMinimizerPlugin({
         minimizer: {
           implementation: ImageMinimizerPlugin.squooshMinify,
-          // options: {},
         },
       }),
     ],

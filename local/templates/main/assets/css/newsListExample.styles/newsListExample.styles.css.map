@@ -1,0 +1,1 @@
+{"version":3,"file":"assets/css/newsListExample.styles/newsListExample.styles.css","mappings":"AAAA,WACE,c","sources":["webpack://markup-starter-kit/./src/components/newsListExample/style.scss"],"sourcesContent":[".component {\r\n  color: #1ec951;\r\n}\r\n"],"names":[],"sourceRoot":""}

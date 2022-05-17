@@ -41,6 +41,7 @@
     "postcss": "^8.3.11",
     "postcss-loader": "^6.2.0",
     "pug-html-loader": "^1.1.5",
+    "remove-files-webpack-plugin": "^1.5.0",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
