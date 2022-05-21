@@ -5,3 +5,13 @@ html {
   font-size: $defaultFontSize;
   line-height: $defaultLineHeight;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}

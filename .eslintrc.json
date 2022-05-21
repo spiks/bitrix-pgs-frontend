@@ -16,8 +16,9 @@
         "map": [
           ["@", "./src"],
           ["@template", "./src/template"],
-          ["@utils", "./src/utils"],
           ["@components", "./src/components"],
+          ["@includes", "./src/includes"],
+          ["@utils", "./src/utils"],
           ["@modules", "./src/modules"]
         ]
       }
@@ -32,6 +33,7 @@
         "js": "always"
       }
     ],
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "no-new": 0
   }
 }

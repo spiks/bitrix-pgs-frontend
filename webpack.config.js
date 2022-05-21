@@ -13,7 +13,6 @@ const PATHS = {
 
 const PAGES_DIR = path.join(__dirname, 'src/pages');
 const COMPONENTS_DIR = path.join(__dirname, 'src/components');
-const VENDORS_DIR = path.join(__dirname, 'src/vendors');
 
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
 
@@ -67,39 +66,13 @@ const getComponentsEntryPoints = () => {
   return entryPointsMap;
 }
 
-const getVendorsEntryPoints = () => {
-  const vendorsDirs = fs.readdirSync(VENDORS_DIR);
-
-  const entryPointsMap = {};
-
-  vendorsDirs.forEach((vendorDir) => {
-    const [dirName] = vendorDir.split('.');
-
-    const scriptEntryPointName = `${dirName}.scripts`;
-    const scriptEntryPointFilePath = path.join(__dirname, `src/vendors/${dirName}/script.js`);
-    
-    const styleEntryPointName = `${dirName}.styles`;
-    const styleEntryPointFilePath = path.join(__dirname, `src/vendors/${dirName}/style.js`);
-
-    if (fs.existsSync(scriptEntryPointFilePath) && !entryPointsMap[scriptEntryPointName]) {
-      entryPointsMap[scriptEntryPointName] = scriptEntryPointFilePath;
-    }
-
-    if (fs.existsSync(styleEntryPointFilePath) && !entryPointsMap[styleEntryPointFilePath]) {
-      entryPointsMap[styleEntryPointName] = styleEntryPointFilePath;
-    }
-  });
-
-  console.log(`Vendors list: ${JSON.stringify(entryPointsMap)}`);
-  return entryPointsMap;
-}
-
 const config = {
   target: 'browserslist',
   entry: {
-    ...getVendorsEntryPoints(),
     'template.styles': `${PATHS.src}/template/template_styles.js`,
     'template.scripts': `${PATHS.src}/template/template.js`,
+    'includes.styles': `${PATHS.src}/includes/includes_styles.js`,
+    'includes.scripts': `${PATHS.src}/includes/includes.js`,
     ...getComponentsEntryPoints(),
   },
   output: {
@@ -119,8 +92,9 @@ const config = {
     alias: {
       '@': PATHS.src,
       '@template': `${PATHS.src}/template`,
-      '@utils': `${PATHS.src}/utils`,
+      '@includes': `${PATHS.src}/includes`,
       '@components': `${PATHS.src}/components`,
+      '@utils': `${PATHS.src}/utils`,
       '@modules': `${PATHS.src}/modules`,
     }
   },
@@ -210,6 +184,16 @@ const config = {
     ],
   },
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'vendors',
+          test: /node_modules/,
+          chunks: 'all',
+          enforce: true,
+        }
+      }
+    },
     minimizer: [
       new ImageMinimizerPlugin({
         minimizer: {

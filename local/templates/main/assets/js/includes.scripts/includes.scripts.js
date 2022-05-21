@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 76:
+/***/ 102:
 /***/ (function(__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) {
 
 
@@ -10,58 +10,32 @@
 var classCallCheck = __webpack_require__(671);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
 var createClass = __webpack_require__(144);
-;// CONCATENATED MODULE: ./src/components/newsListExample/modules/ModuleName.js
+;// CONCATENATED MODULE: ./src/includes/js/IncludeName.js
 
 
 
-var ModuleName = /*#__PURE__*/function () {
-  function ModuleName() {
-    (0,classCallCheck/* default */.Z)(this, ModuleName);
+var IncludeName = /*#__PURE__*/function () {
+  function IncludeName() {
+    (0,classCallCheck/* default */.Z)(this, IncludeName);
   }
 
-  (0,createClass/* default */.Z)(ModuleName, null, [{
+  (0,createClass/* default */.Z)(IncludeName, null, [{
     key: "test",
     value: function test() {
-      console.log('log: test ModuleName');
+      console.log('log: test IncludeName');
     }
   }]);
 
-  return ModuleName;
+  return IncludeName;
 }();
 
-/* harmony default export */ var modules_ModuleName = (ModuleName);
-;// CONCATENATED MODULE: ./src/components/newsListExample/component.js
-
-
-// Импорт модулей, используемых компонентом (свои или сторонние)
-
-
-var ComponentName = /*#__PURE__*/function () {
-  function ComponentName() {
-    (0,classCallCheck/* default */.Z)(this, ComponentName);
-
-    this.componentName = 'ComponentName';
-    this.test();
-  }
-
-  (0,createClass/* default */.Z)(ComponentName, [{
-    key: "test",
-    value: function test() {
-      console.log("log: test ".concat(this.componentName));
-      modules_ModuleName.test();
-    }
-  }]);
-
-  return ComponentName;
-}();
-
-/* harmony default export */ var component = (ComponentName);
-;// CONCATENATED MODULE: ./src/components/newsListExample/script.js
+/* harmony default export */ var js_IncludeName = (IncludeName);
+;// CONCATENATED MODULE: ./src/includes/includes.js
 // Импорт модуля компонента
  // Вызов компонента
 
 document.addEventListener('DOMContentLoaded', function () {
-  new component();
+  js_IncludeName.test();
 });
 
 /***/ })
@@ -155,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			35: 0
+/******/ 			812: 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -207,9 +181,9 @@ document.addEventListener('DOMContentLoaded', function () {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [216], function() { return __webpack_require__(76); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [216], function() { return __webpack_require__(102); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=newsListExample.scripts.js.map
+//# sourceMappingURL=includes.scripts.js.map
