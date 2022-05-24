@@ -1,1 +1,0 @@
-{"version":3,"file":"assets/css/includes.styles/includes.styles.css","mappings":"AAAA,SACE,c","sources":["webpack://markup-starter-kit/./src/includes/css/includeName.scss"],"sourcesContent":[".include {\r\n  color: blueviolet;\r\n}\r\n"],"names":[],"sourceRoot":""}

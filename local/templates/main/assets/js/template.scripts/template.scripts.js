@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 216:
+/***/ 579:
 /***/ (function(__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) {
 
 
@@ -30,10 +30,58 @@ var GlobalModuleName = /*#__PURE__*/function () {
 }();
 
 /* harmony default export */ var js_GlobalModuleName = (GlobalModuleName);
-;// CONCATENATED MODULE: ./src/template/template.js
+;// CONCATENATED MODULE: ./src/components/newsListExample/modules/ModuleName.js
+
+
+
+var ModuleName = /*#__PURE__*/function () {
+  function ModuleName() {
+    (0,classCallCheck/* default */.Z)(this, ModuleName);
+  }
+
+  (0,createClass/* default */.Z)(ModuleName, null, [{
+    key: "test",
+    value: function test() {
+      console.log('log: test ModuleName');
+    }
+  }]);
+
+  return ModuleName;
+}();
+
+/* harmony default export */ var modules_ModuleName = (ModuleName);
+;// CONCATENATED MODULE: ./src/components/newsListExample/component.js
+
+
+// Импорт модулей, используемых компонентом (свои или сторонние)
+
+
+var ComponentName = /*#__PURE__*/function () {
+  function ComponentName() {
+    (0,classCallCheck/* default */.Z)(this, ComponentName);
+
+    this.componentName = 'ComponentName';
+    this.test();
+  }
+
+  (0,createClass/* default */.Z)(ComponentName, null, [{
+    key: "test",
+    value: function test() {
+      console.log('log: test newsListExample');
+      modules_ModuleName.test();
+    }
+  }]);
+
+  return ComponentName;
+}();
+
+/* harmony default export */ var component = (ComponentName);
+;// CONCATENATED MODULE: ./src/template/template_modules.js
+
 
 document.addEventListener('DOMContentLoaded', function () {
   js_GlobalModuleName.test();
+  component.test();
 });
 
 /***/ })
@@ -179,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [216], function() { return __webpack_require__(216); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [216], function() { return __webpack_require__(579); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

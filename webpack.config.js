@@ -11,6 +11,8 @@ const PATHS = {
   assets: 'assets',
 }
 
+const BUILD_COMPONENTS_STATE = 'default'; 
+const BUILD_INCLUDES_STATE = 'default'; 
 const PAGES_DIR = path.join(__dirname, 'src/pages');
 const COMPONENTS_DIR = path.join(__dirname, 'src/components');
 
@@ -40,6 +42,8 @@ const initMultipleHtmlPlugin = () => {
 };
 
 const getComponentsEntryPoints = () => {
+  if (BUILD_COMPONENTS_STATE === 'default') return {};
+
   const componentsDirs = fs.readdirSync(COMPONENTS_DIR);
 
   const entryPointsMap = {};
@@ -66,13 +70,21 @@ const getComponentsEntryPoints = () => {
   return entryPointsMap;
 }
 
+const getIncludesEntryPoints = () => {
+  if (BUILD_INCLUDES_STATE === 'default') return {};
+
+  return {
+    'includes.styles': `${PATHS.src}/includes/includes_styles.js`,
+    'includes.scripts': `${PATHS.src}/includes/includes_modules.js`,
+  };
+};
+
 const config = {
   target: 'browserslist',
   entry: {
     'template.styles': `${PATHS.src}/template/template_styles.js`,
-    'template.scripts': `${PATHS.src}/template/template.js`,
-    'includes.styles': `${PATHS.src}/includes/includes_styles.js`,
-    'includes.scripts': `${PATHS.src}/includes/includes.js`,
+    'template.scripts': `${PATHS.src}/template/template_modules.js`,
+    ...getIncludesEntryPoints(),
     ...getComponentsEntryPoints(),
   },
   output: {

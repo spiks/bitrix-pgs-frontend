@@ -7,8 +7,8 @@ class ComponentName {
     this.test();
   }
 
-  test() {
-    console.log(`log: test ${this.componentName}`);
+  static test() {
+    console.log('log: test newsListExample');
     ModuleName.test();
   }
 }
