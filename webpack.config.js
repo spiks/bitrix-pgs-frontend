@@ -37,7 +37,9 @@ const initMultipleHtmlPlugin = () => {
     });
   });
 
-  console.log(`Pages list: ${JSON.stringify(pagesMap)}`);
+  console.log('Pages list:');
+  console.log(`${JSON.stringify(pagesMap)}`);
+
   return pluginInstances;
 };
 
@@ -66,7 +68,8 @@ const getComponentsEntryPoints = () => {
     }
   });
 
-  console.log(`Components list: ${JSON.stringify(entryPointsMap)}`);
+  console.log('Components list:');
+  console.log(`${JSON.stringify(entryPointsMap)}`);
   return entryPointsMap;
 }
 
@@ -107,7 +110,6 @@ const config = {
       '@includes': `${PATHS.src}/includes`,
       '@components': `${PATHS.src}/components`,
       '@utils': `${PATHS.src}/utils`,
-      '@modules': `${PATHS.src}/modules`,
     }
   },
   plugins: [    

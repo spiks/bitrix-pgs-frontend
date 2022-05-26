@@ -18,8 +18,7 @@
           ["@template", "./src/template"],
           ["@components", "./src/components"],
           ["@includes", "./src/includes"],
-          ["@utils", "./src/utils"],
-          ["@modules", "./src/modules"]
+          ["@utils", "./src/utils"]
         ]
       }
     }
