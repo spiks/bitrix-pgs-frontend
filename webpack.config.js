@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlBeautifierPlugin = require('html-beautifier-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const RemovePlugin = require('remove-files-webpack-plugin');
@@ -115,6 +116,8 @@ const config = {
   plugins: [    
     ...initMultipleHtmlPlugin(),
 
+    new HtmlBeautifierPlugin(),
+
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}/css/[name]/[name].css`,
     }),
@@ -175,7 +178,6 @@ const config = {
         test: /\.html$/i,
         loader: 'html-loader',
         options: {
-          minimize: mode === 'production',
           attrs: ['source:srcset', 'img:src']
         },
       },
@@ -188,7 +190,6 @@ const config = {
           {
             loader: 'pug-html-loader',
             options: {
-              pretty: true,
               basedir: PATHS.src,
             },
           }
