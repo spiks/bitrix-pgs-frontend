@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 579:
+/***/ 772:
 /***/ (function(__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) {
 
 
@@ -76,7 +76,7 @@ var ComponentName = /*#__PURE__*/function () {
 }();
 
 /* harmony default export */ var component = (ComponentName);
-;// CONCATENATED MODULE: ./src/template/template_modules.js
+;// CONCATENATED MODULE: ./src/scripts.js
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [216], function() { return __webpack_require__(579); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [216], function() { return __webpack_require__(772); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

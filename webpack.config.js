@@ -86,8 +86,8 @@ const getIncludesEntryPoints = () => {
 const config = {
   target: 'browserslist',
   entry: {
-    'template.styles': `${PATHS.src}/template/template_styles.js`,
-    'template.scripts': `${PATHS.src}/template/template_modules.js`,
+    'template.styles': `${PATHS.src}/styles.js`,
+    'template.scripts': `${PATHS.src}/scripts.js`,
     ...getIncludesEntryPoints(),
     ...getComponentsEntryPoints(),
   },
