@@ -11,6 +11,7 @@
         width: 100%;
         box-sizing: border-box;
         padding: 200px 20px 0;
+        overflow: hidden;
     
         @include media(sm) {
           padding: 240px 80px;
@@ -22,6 +23,7 @@
         }
     
         @include media(l) {
+          overflow: visible;
           max-width: 1184px;
           margin: 0 auto;
         }
