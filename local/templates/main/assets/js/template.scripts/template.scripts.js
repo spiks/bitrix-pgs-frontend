@@ -157,13 +157,15 @@ var RolesSlider = /*#__PURE__*/function () {
       });
       var slider = new swiper_bundle_esm/* default */.Z(this.slider, {
         observer: true,
+        slidesPerView: 1,
         thumbs: {
           swiper: navSlider
         },
         navigation: {
           nextEl: navNextButton,
           prevEl: navPrevButton
-        }
+        },
+        spaceBetween: 16
       });
     }
   }]);

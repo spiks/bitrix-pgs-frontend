@@ -27,6 +27,7 @@ class RolesSlider {
 
     const slider = new Swiper(this.slider, {
       observer: true,
+      slidesPerView: 1,
 
       thumbs: {
         swiper: navSlider,
@@ -36,6 +37,8 @@ class RolesSlider {
         nextEl: navNextButton,
         prevEl: navPrevButton,
       },
+
+      spaceBetween: 16,
     });
   }
 }
