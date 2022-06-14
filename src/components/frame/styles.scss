@@ -11,8 +11,14 @@
       padding: 240px 80px 0;
     }
 
-    @include media(l) {
+    @include media(md) {
       min-height: 100vh;
+      padding: 152px 80px 0;
+    }
+
+    @include media(l) {
+      max-width: 1024px;
+      margin: 0 auto;
     }
   }
 
