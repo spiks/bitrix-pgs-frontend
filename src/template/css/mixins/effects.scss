@@ -1,0 +1,16 @@
+@import '@template/css/mixins/media.scss';
+
+@mixin defaultInteractionEffect {
+  transition: 0.2s ease-in-out;
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include media(l) {
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}
