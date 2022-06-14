@@ -1,0 +1,116 @@
+@import '@template/css/mixins/media.scss';
+@import '@template/css/mixins/effects.scss';
+
+.search {
+  position: relative;
+  margin-bottom: 45px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(108.61deg, #54CEEC 0.21%, #599CF6 99.8%);
+    opacity: 0.32;
+    filter: blur(80px);
+  }
+
+  @include media(sm) {
+    margin-bottom: 80px;
+  }
+
+  @include media(md) {
+    margin-bottom: 190px;
+  }
+
+  @include media(l) {
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 32px;
+    border: 1px solid #599CF6;
+  }
+
+  &__field {
+    flex-grow: 1;
+    border-radius: 32px;
+    border: none;
+    padding: 0 32px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__field-title {
+    display: inline;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    background: linear-gradient(108.61deg, #54CEEC 0.21%, #599CF6 99.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @include media(sm) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__button {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    margin-top: -1px;
+    margin-right: -1px;
+    padding: 0;
+    border-radius: 32px;
+    border: none;
+    background: linear-gradient(71.65deg, #599CF6 13.48%, #5924F1 89.09%);
+
+    @include media(sm) {
+      width: 226px;
+    }
+  }
+
+  &__button-title {
+    display: none;
+
+    @include media(sm) {
+      display: block;
+
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+
+      color: #FFFFFF;
+    }
+  }
+
+  &__button-icon {
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.9892 19.1252C22.2803 17.3635 22.8585 15.1792 22.6083 13.0094C22.3581 10.8396 21.2978 8.84434 19.6396 7.42273C17.9814 6.00112 15.8476 5.25803 13.665 5.34213C11.4825 5.42622 9.41214 6.33131 7.86825 7.8763C6.32436 9.42129 5.42076 11.4923 5.33823 13.6749C5.25569 15.8575 6.00031 17.9908 7.42311 19.6479C8.8459 21.3051 10.842 22.364 13.0119 22.6127C15.1819 22.8614 17.3657 22.2815 19.1266 20.9892H19.1252C19.1652 21.0426 19.2079 21.0932 19.2559 21.1426L24.3892 26.2759C24.6392 26.5261 24.9784 26.6667 25.3321 26.6668C25.6858 26.667 26.025 26.5266 26.2752 26.2766C26.5254 26.0265 26.666 25.6874 26.6662 25.3337C26.6663 24.98 26.5259 24.6407 26.2759 24.3906L21.1426 19.2572C21.0949 19.209 21.0436 19.1644 20.9892 19.1239V19.1252ZM21.3332 13.9999C21.3332 14.9629 21.1435 15.9165 20.775 16.8062C20.4065 17.696 19.8663 18.5044 19.1853 19.1853C18.5044 19.8663 17.696 20.4065 16.8062 20.775C15.9165 21.1435 14.9629 21.3332 13.9999 21.3332C13.0369 21.3332 12.0833 21.1435 11.1936 20.775C10.3038 20.4065 9.49541 19.8663 8.81445 19.1853C8.13348 18.5044 7.59331 17.696 7.22478 16.8062C6.85624 15.9165 6.66656 14.9629 6.66656 13.9999C6.66656 12.055 7.43918 10.1897 8.81445 8.81444C10.1897 7.43917 12.055 6.66656 13.9999 6.66656C15.9448 6.66656 17.8101 7.43917 19.1853 8.81444C20.5606 10.1897 21.3332 12.055 21.3332 13.9999Z' fill='white'/%3E%3C/svg%3E%0A");
+
+    @include media(sm) {
+      margin: 0 8px 0 0;
+    }
+  }
+}

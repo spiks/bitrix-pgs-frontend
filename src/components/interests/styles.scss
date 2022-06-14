@@ -1,0 +1,376 @@
+@import '@template/css/mixins/media.scss';
+@import '@template/css/mixins/effects.scss';
+
+.interests {
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 200px 20px 0;
+    
+        @include media(sm) {
+          padding: 240px 80px;
+        }
+    
+        @include media(md) {
+          min-height: 100vh;
+          padding: 100px 80px;
+        }
+    
+        @include media(l) {
+          max-width: 1184px;
+          margin: 0 auto;
+        }
+    }
+
+    &__inner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        @include media(md) {
+            flex-direction: row;
+        }
+    }
+
+    &__dialog {
+        position: relative;
+        width: 100%;
+        margin-bottom: 80px;
+
+        @include media(md) {
+            width: 456px;
+            margin-bottom: 0;
+            margin-right: 80px;
+        }
+
+        @include media(l) {
+            margin-right: 112px;
+        }
+    }
+
+    &__dialog-bg{
+        pointer-events: none;
+        position: absolute;
+        width: 1000px;
+        transform: translate(-50%, -50%);
+        left: 66%;
+        top: 60%;
+
+        @include media(sm) {
+            top: 50%;
+            left: 50%;
+        }
+    }
+
+    &__dialog-emoji{
+        position: absolute;
+
+        &--1{
+            right: 14px;
+            top: 70px;
+            z-index: 2;
+
+            @include media(sm) {
+                right: 55px;
+            }
+
+            @include media(md) {
+                right: 0;
+            }
+        }
+
+        &--2{
+            display: none;
+            left: -15px;
+            top: 128px;
+
+            @include media(md) {
+                display: block;
+            }
+            
+            @include media(l) {
+                top: 180px;
+                left: 10px;  
+            }
+        }
+
+        &--3{
+            display: none;
+            top: 270px;
+            right: -22px;
+
+            @include media(md) {
+                display: block;
+            }
+        }
+
+        &--4{
+            display: none;
+            top: 385px;
+            left: -66px;
+
+            @include media(md) {
+                display: block;
+            }
+
+            @include media(l) {
+                top: 405px;
+                left: -50px;
+            }
+        }
+
+        &--5{
+            right: 200px;
+            top: 522px;
+            z-index: 2;
+
+            @include media(sm) {
+                right: 240px;
+            }
+
+            @include media(md) {
+                right: 185px;
+            }
+
+            @include media(l) {
+                left: 98px;
+            }
+        }
+    }
+
+    &__dialog-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__message {
+        position: relative;
+        box-sizing: border-box;
+        padding: 24px;
+        margin-bottom: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        color: #4F4F4F;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H32V32L0 0Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+        }
+
+        &:nth-of-type(odd){
+            margin-right: auto;
+            border-radius: 0px 24px 24px 24px;
+            max-width: 420px;
+
+            margin-left: 20px;
+
+            @include media(sm) {
+                margin-left: 64px;
+            }
+
+            @include media(md) {
+                margin-left: 0;
+            }
+        }
+
+        &:nth-of-type(even){
+            margin-left: auto;
+            margin-bottom: 48px;
+            border-radius: 24px 0px 24px 24px;
+            background: linear-gradient(71.65deg, #599CF6 13.48%, #5924F1 89.09%), linear-gradient(74.83deg, #FF3D00 0%, #FFB800 93.44%);
+            color: #fff;
+            text-align: right;
+            margin-right: 20px;
+
+            @include media(sm) {
+                margin-right: 64px;
+            }
+
+            @include media(md) {
+                margin-right: 0;
+            }
+
+            &::after{
+                background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 0H0V32L32 0Z' fill='%235924F1'/%3E%3C/svg%3E%0A");
+                right: auto;
+                left: 100%;
+            }
+
+            max-width: 296px;
+
+            @include media(l) {
+                max-width: 336px;
+            }
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    &__message-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    
+    &__message-title + &__message-content{
+        margin-left: 52px;
+    }
+
+    &__message-content{
+        text-align: left;
+    }
+
+    &__message-text {
+        margin: 0;
+        font-size: 20px;
+        line-height: 23px;
+
+        
+        @include media(md) {
+            text-align: left;
+        }
+
+        @include media(l) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+
+        &--sm{
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__message-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+
+    &__message-link {
+        display: block;
+        margin-top: 8px;
+        color: #fff;
+        text-decoration: underline;
+        text-align: right;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+
+        @include media(md) {
+            width: 328px;
+            align-items: flex-start;
+        }
+
+        @include media(l) {
+            width: 456px;
+            margin-top: 90px;
+        }
+    }
+
+    &__title {
+        padding: 0;
+        margin: 0;
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: 900;
+        background: linear-gradient(108.61deg, #54CEEC 0.21%, #599CF6 99.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-align: center;
+        margin-bottom: 32px;
+
+        @include media(sm) {
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 47px;
+        }
+      
+        @include media(md) {
+            font-size: 48px;
+            line-height: 56px;
+            text-align: left;
+            margin-bottom: 48px;
+        }
+      
+        @include media(l) {
+            font-size: 64px;
+            line-height: 75px;
+        }
+    }
+
+    &__desc {
+        padding: 0;
+        margin: 0;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        color: #828282;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+
+        @include media(md) {
+            text-align: left;
+        }
+
+        @include media(l) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+
+    &__button {
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 18px 56px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 24px;
+        line-height: 29px;
+        background: linear-gradient(71.65deg, #599CF6 13.48%, #5924F1 89.09%);
+        width: 100%;
+        margin-top: 40px;
+
+        @include media(sm) {
+            width: auto;
+        }
+
+        @include media(md) {
+            margin-top: 64px;
+        }
+
+
+    }
+}

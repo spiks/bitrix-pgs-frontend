@@ -10,6 +10,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img{
+  image-rendering: -webkit-optimize-contrast;
 }
 
 footer {

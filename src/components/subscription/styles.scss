@@ -1,0 +1,47 @@
+@import '@template/css/mixins/media.scss';
+@import '@template/css/mixins/effects.scss';
+
+.subscription {
+  padding-bottom: 80px;
+  border-bottom: 1px solid  #ffffff14;;
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__title h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+
+    background: linear-gradient(108.61deg, #54CEEC 0.21%, #599CF6 99.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  &__desc {
+    margin: 0 0 32px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__form {
+    margin: 0 0 40px;
+  }
+
+  &__form-info {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    
+    color: #BDBDBD;
+  }
+}

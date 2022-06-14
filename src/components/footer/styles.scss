@@ -1,0 +1,26 @@
+@import '@template/css/mixins/media.scss';
+@import '@template/css/mixins/effects.scss';
+
+.footer {
+  background: linear-gradient(180deg, #002961 0%, #021938 100%);
+
+  &__container {
+    padding: 80px 20px 0;
+
+    @include media(sm) {
+      padding: 80px 80px 0;
+    }
+
+    @include media(md) {
+      padding: 80px 0;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    @include media(l) {
+      padding: 80px 0;
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+  }
+}

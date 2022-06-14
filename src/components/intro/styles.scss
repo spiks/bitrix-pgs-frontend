@@ -1,0 +1,263 @@
+@import '@template/css/mixins/media.scss';
+@import '@template/css/mixins/effects.scss';
+
+.intro{
+    display: block;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 180px 20px 0;
+    
+        @include media(sm) {
+          padding: 220px 80px 0;
+        }
+    
+        @include media(md) {
+          min-height: 100vh;
+          padding: 100px 80px 0;
+        }
+    
+        @include media(l) {
+          max-width: 1184px;
+          margin: 0 auto;
+        }
+    }
+
+    &__inner{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto 0;
+
+        @include media(md) {
+            flex-direction: row;
+        }
+    }
+
+    &__main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        width: 100%;
+
+        @include media(sm) {
+            margin-top: 80px;
+        }
+
+        @include media(md) {
+            width: 392px;
+            margin-top: 0;
+            align-items: flex-start;
+            padding: 100px 0;
+            margin-right: 80px;
+        }
+
+        @include media(l) {
+            width: 456px;
+            margin-right: 112px;
+        }
+    }
+
+    &__title{
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0;
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: 900;
+        background: linear-gradient(108.61deg, #54CEEC 0.21%, #599CF6 99.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-align: center;
+        margin-bottom: 32px;
+
+        @include media(sm) {
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 47px;
+            margin-bottom: 40px;
+          }
+      
+          @include media(md) {
+            font-size: 48px;
+            line-height: 56px;
+            text-align: left;
+            margin-bottom: 40px;
+          }
+      
+          @include media(l) {
+            font-size: 64px;
+            line-height: 75px;
+          }
+    }
+
+    &__desc{
+        max-width: 322px;
+
+        @include media(md) {
+            max-width: none;
+        }
+    }
+
+    &__text{
+        padding: 0;
+        margin: 0;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        color: #828282;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+
+        @include media(md) {
+            text-align: left;
+        }
+
+        @include media(l) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        span{
+            font-weight: 500;
+            background: linear-gradient(87.38deg, #A700E2 1.17%, #6688FF 97.04%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+            &:nth-of-type(2){
+                background: linear-gradient(78.4deg, #32D0D0 5.77%, #4056CA 89.05%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+
+            &:nth-of-type(3){
+                background: linear-gradient(87.46deg, #FF3D00 1.04%, #FFB800 97.98%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            } 
+        }
+    }
+
+    &__button{
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 18px 56px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 24px;
+        line-height: 29px;
+        background: linear-gradient(71.65deg, #599CF6 13.48%, #5924F1 89.09%);
+        width: 100%;
+        margin-top: 48px;
+
+        @include media(sm) {
+            width: auto;
+            margin-top: 56px;
+        }
+
+        @include media(md) {
+            margin-top: 64px;
+        }
+    }
+
+    &__img-wrapper{
+        position: relative;
+        order: -1;
+        width: 100%;
+        pointer-events: none;
+
+        @include media(md) {
+            order: 1;
+            width: 392px;
+            max-height: none;
+        }
+
+        @include media(l) {
+            width: 456px;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        position: relative;
+        z-index: 2;
+        max-height: 286px;
+
+        @include media(sm) {
+            max-height: 426px;
+        }
+
+        @include media(md) {
+            max-height: none;
+        }
+    }
+
+    &__bg{
+        position: absolute;
+        top: 25%;
+        object-fit: contain;
+        width: 380px;
+        left: 0;
+        transform: translate(-20%, -50%);
+
+        @include media(sm) {
+            top: 50%;
+            width: 620px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @include media(md) {
+            width: 765px;
+        }
+    }
+
+    &__scroll{
+        text-decoration: none;
+        margin: 22.5px auto;
+        align-items: center;
+        flex-direction: column;
+        display: none;
+
+        @include media(sm) {
+            display: flex;
+        }
+    }
+
+    &__scroll-text{
+        font-size: 16px;
+        line-height: 19px;
+        color: #828282;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    &__scroll-icon{
+        width: 40px;
+        height: 80px;
+        object-fit: contain;
+    }
+}
