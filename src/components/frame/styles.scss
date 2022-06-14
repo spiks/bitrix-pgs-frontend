@@ -1,0 +1,108 @@
+@import '@template/css/mixins/media.scss';
+@import '@template/css/mixins/effects.scss';
+
+.frame {
+  &__container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 120px 20px 0;
+
+    @include media(sm) {
+      padding: 240px 80px 0;
+    }
+
+    @include media(md) {
+      min-height: 100vh;
+      padding: 152px 80px 0;
+    }
+
+    @include media(l) {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    margin: 0 0 32px;
+
+    @include media(sm) {
+      margin: 0 0 48px;
+    }
+
+    @include media(l) {
+      margin: 0 0 48px;
+    }
+  }
+
+  &__title h2 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    background: linear-gradient(108.61deg, #54CEEC 0.21%, #599CF6 99.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+
+    @include media(sm) {
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    @include media(md) {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    @include media(l) {
+      font-size: 64px;
+      line-height: 75px;
+    }
+  }
+
+  &__title_size_sm h2 {
+    font-size: 32px;
+    line-height: 38px;
+
+    @include media(sm) {
+      font-size: 36px;
+      line-height: 42px;
+    }
+
+    @include media(md) {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    @include media(l) {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+
+  &__desc {
+    margin: 0 0 32px;
+  }
+
+  &__desc p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #828282;
+
+    @include media(l) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}
+
+.frame_bg_light {
+  background: linear-gradient(180deg, rgba(213, 240, 255, 0) 0%, #D4F0FF 100%);
+}
