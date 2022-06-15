@@ -20,3 +20,4 @@ import '@components/app/styles.scss';
 import '@components/pagination/styles.scss';
 import '@components/footer/styles.scss';
 import '@components/rights/styles.scss';
+import '@components/modal/styles.scss';

@@ -17,19 +17,36 @@
   <body>
     <header class="header">
       <div class="header__container">
-        <div class="header__inner"><a class="header__logo" href="#"> <img class="header__logo-img"
-              src="assets/media/logo.svg" alt=""></a><a class="header__button" href="#download"> <span>
-              Скачать</span></a></div>
+        <div class="header__inner">
+          <div class="header__logo"> <img class="header__logo-img" src="assets/media/logo.svg" alt=""></div><a
+            class="header__button" href="#download"> <span> Скачать</span></a>
+        </div>
       </div>
     </header>
-    <section class="intro">
+    <div class="pagination" data-entity="navbar">
+      <div class="pagination__items">
+        <div class="pagination__item"><button class="pagination__button pagination__button_active" type="button"
+            data-entity="navbar-button"></button><span class="pagination__label">01</span></div>
+        <div class="pagination__item"><button class="pagination__button" type="button"
+            data-entity="navbar-button"></button><span class="pagination__label">02</span></div>
+        <div class="pagination__item"><button class="pagination__button" type="button"
+            data-entity="navbar-button"></button><span class="pagination__label">03</span></div>
+        <div class="pagination__item"><button class="pagination__button" type="button"
+            data-entity="navbar-button"></button><span class="pagination__label">04</span></div>
+        <div class="pagination__item"><button class="pagination__button" type="button"
+            data-entity="navbar-button"></button><span class="pagination__label">05</span></div>
+        <div class="pagination__item"><button class="pagination__button" type="button"
+            data-entity="navbar-button"></button><span class="pagination__label">06 </span></div>
+      </div>
+    </div>
+    <section class="intro" data-entity="frame" data-page-index="0">
       <div class="container intro__container">
         <div class="intro__inner">
           <div class="intro__main">
             <h2 class="intro__title">Приложение городских сервисов</h2>
             <div class="intro__desc">
-              <p class="intro__text">Мобильное приложение, которое объединяет в себе все городские <br>
-                <span>сервисы</span>, <span>места</span> и <span>события</span></p>
+              <p class="intro__text">Мобильное приложение, которое объединит в себе все городские <br>
+                <span>сервисы</span>, <span>места</span>, <span>события</span> и <span>новости</span></p>
             </div><a class="button intro__button" href="#download"><span>Скачать </span></a>
           </div>
           <div class="intro__img-wrapper"> <img class="intro__img" src="assets/media/intro-main.png" alt=""><img
@@ -59,26 +76,27 @@
                     src="assets/media/message-icon--1.svg" alt="">
                   <p class="interests__message-text">Парковки СПб</p>
                 </div>
-                <div class="interests__message-content"><a class="interests__message-link" href="#">Установить</a></div>
+                <div class="interests__message-content"><a class="interests__message-link"
+                    href="#download">Установить</a></div>
               </div>
               <div class="interests__message">
                 <div class="interests__message-content">
-                  <p class="interests__message-text">Как получить разрешение <br> на съёмку с дрона?</p>
+                  <p class="interests__message-text">Куда пойти вечером?</p>
                 </div>
               </div>
               <div class="interests__message">
                 <div class="interests__message-title"> <img class="interests__message-icon"
-                    src="assets/media/message-icon--2.svg" alt="">
-                  <p class="interests__message-text">Клуб пилотирования</p>
+                    src="assets/media/message-icon--3.svg" alt="">
+                  <p class="interests__message-text">Культура Петербурга</p>
                 </div>
                 <div class="interests__message-content">
-                  <p class="interests__message-text interests__message-text--sm">Вы можете обратиться за помощью к
-                    участникам сообщества</p><a class="interests__message-link" href="#">Перейти в клуб</a>
+                  <p class="interests__message-text interests__message-text--sm">Информационное пространство,
+                    рассказывающее о многообразии событий в городе</p>
                 </div>
               </div>
               <div class="interests__message">
                 <div class="interests__message-content">
-                  <p class="interests__message-text">В каком году закончится дождь?</p>
+                  <p class="interests__message-text">Где найти нужную книгу?</p>
                 </div>
               </div>
             </div>
@@ -92,29 +110,14 @@
         </div>
       </div>
     </section>
-    <div class="pagination" data-entity="navbar">
-      <div class="pagination__items">
-        <div class="pagination__item"><button class="pagination__button" type="button"
-            data-entity="navbar-button"></button><span class="pagination__label">01</span></div>
-        <div class="pagination__item"><button class="pagination__button" type="button"
-            data-entity="navbar-button"></button><span class="pagination__label">02</span></div>
-        <div class="pagination__item"><button class="pagination__button" type="button"
-            data-entity="navbar-button"></button><span class="pagination__label">03</span></div>
-        <div class="pagination__item"><button class="pagination__button pagination__button_active" type="button"
-            data-entity="navbar-button"></button><span class="pagination__label">04</span></div>
-        <div class="pagination__item"><button class="pagination__button" type="button"
-            data-entity="navbar-button"></button><span class="pagination__label">05</span></div>
-        <div class="pagination__item"><button class="pagination__button" type="button"
-            data-entity="navbar-button"></button><span class="pagination__label">06 </span></div>
-      </div>
-    </div>
     <section class="frame" data-entity="frame" data-page-index="2">
       <div class="frame__container">
         <div class="frame__title">
-          <h2>Управлять жизнью легко</h2>
+          <h2>Решать вопросы быстро</h2>
         </div>
         <div class="frame__desc">
-          <p>Выбирайте подходящие роли, чтобы получить быстрый и удобный доступ к необходимым сервисам.</p>
+          <p>Городской поисковик нового типа для решения актуальных жизненных задач. Выбирайте подходящие роли, чтобы
+            получить быстрый и удобный доступ к необходимым сервисам.</p>
         </div>
         <div class="frame__content">
           <div class="roles">
@@ -207,37 +210,40 @@
                       </div>
                       <div class="roles__card-icon"><svg viewBox="0 0 281 281" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="211.544" cy="90.5222" r="42" transform="rotate(-45 211.544 90.5222)"
+                          <circle cx="211.544" cy="90.522" r="42" transform="rotate(-45 211.544 90.522)"
                             fill="url(#paint0_linear_105_2786)" />
                           <g filter="url(#filter0_b_105_2786)">
                             <mask id="path-2-inside-1_105_2786" fill="white">
                               <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M131.044 62.7283C153.832 62.7283 173.071 77.9221 179.183 98.7319C182.283 98.0743 185.498 97.7283 188.794 97.7283C214.096 97.7283 234.635 118.119 234.875 143.364C235.836 143.274 236.809 143.228 237.794 143.228C254.869 143.228 268.71 157.07 268.71 174.145C268.71 190.632 255.804 204.106 239.544 205.013V205.062H237.794H70.3771H65.7104V204.862C38.2563 202.497 16.7104 179.462 16.7104 151.395C16.7104 121.756 40.7378 97.7283 70.3771 97.7283C74.6455 97.7283 78.7976 98.2267 82.7782 99.1683C88.7485 78.1349 108.097 62.7283 131.044 62.7283Z" />
+                                d="M131.044 62.728C153.832 62.728 173.071 77.9218 179.183 98.7316C182.283 98.074 185.498 97.728 188.794 97.728C214.096 97.728 234.635 118.119 234.875 143.364C235.836 143.274 236.809 143.228 237.794 143.228C254.869 143.228 268.71 157.07 268.71 174.145C268.71 190.632 255.804 204.105 239.544 205.013V205.061H237.794H70.3771H65.7104V204.861C38.2563 202.496 16.7104 179.462 16.7104 151.395C16.7104 121.755 40.7378 97.728 70.3771 97.728C74.6455 97.728 78.7976 98.2263 82.7782 99.168C88.7485 78.1346 108.097 62.728 131.044 62.728Z" />
                             </mask>
                             <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M131.044 62.7283C153.832 62.7283 173.071 77.9221 179.183 98.7319C182.283 98.0743 185.498 97.7283 188.794 97.7283C214.096 97.7283 234.635 118.119 234.875 143.364C235.836 143.274 236.809 143.228 237.794 143.228C254.869 143.228 268.71 157.07 268.71 174.145C268.71 190.632 255.804 204.106 239.544 205.013V205.062H237.794H70.3771H65.7104V204.862C38.2563 202.497 16.7104 179.462 16.7104 151.395C16.7104 121.756 40.7378 97.7283 70.3771 97.7283C74.6455 97.7283 78.7976 98.2267 82.7782 99.1683C88.7485 78.1349 108.097 62.7283 131.044 62.7283Z"
+                              d="M131.044 62.728C153.832 62.728 173.071 77.9218 179.183 98.7316C182.283 98.074 185.498 97.728 188.794 97.728C214.096 97.728 234.635 118.119 234.875 143.364C235.836 143.274 236.809 143.228 237.794 143.228C254.869 143.228 268.71 157.07 268.71 174.145C268.71 190.632 255.804 204.105 239.544 205.013V205.061H237.794H70.3771H65.7104V204.861C38.2563 202.496 16.7104 179.462 16.7104 151.395C16.7104 121.755 40.7378 97.728 70.3771 97.728C74.6455 97.728 78.7976 98.2263 82.7782 99.168C88.7485 78.1346 108.097 62.728 131.044 62.728Z"
                               fill="url(#paint1_linear_105_2786)" fill-opacity="0.24" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M131.044 62.728C153.832 62.728 173.071 77.9218 179.183 98.7316C182.283 98.074 185.498 97.728 188.794 97.728C214.096 97.728 234.635 118.119 234.875 143.364C235.836 143.274 236.809 143.228 237.794 143.228C254.869 143.228 268.71 157.07 268.71 174.145C268.71 190.632 255.804 204.105 239.544 205.013V205.061H237.794H70.3771H65.7104V204.861C38.2563 202.496 16.7104 179.462 16.7104 151.395C16.7104 121.755 40.7378 97.728 70.3771 97.728C74.6455 97.728 78.7976 98.2263 82.7782 99.168C88.7485 78.1346 108.097 62.728 131.044 62.728Z"
+                              fill="url(#paint2_radial_105_2786)" fill-opacity="0.16" />
                             <path
-                              d="M179.183 98.7319L178.224 99.0137L178.485 99.9023L179.391 99.7101L179.183 98.7319ZM234.875 143.364L233.875 143.374L233.885 144.461L234.968 144.36L234.875 143.364ZM239.544 205.013L239.488 204.015L238.544 204.067V205.013H239.544ZM239.544 205.062V206.062H240.544V205.062H239.544ZM65.7105 205.062H64.7105V206.062H65.7105V205.062ZM65.7105 204.862H66.7105V203.944L65.7963 203.865L65.7105 204.862ZM82.7782 99.1683L82.548 100.141L83.479 100.362L83.7402 99.4414L82.7782 99.1683ZM180.143 98.4501C173.909 77.2262 154.287 61.7283 131.044 61.7283V63.7283C153.376 63.7283 172.233 78.6181 178.224 99.0137L180.143 98.4501ZM188.794 96.7283C185.428 96.7283 182.143 97.0817 178.976 97.7537L179.391 99.7101C182.423 99.0669 185.568 98.7283 188.794 98.7283V96.7283ZM235.875 143.355C235.63 117.562 214.645 96.7283 188.794 96.7283V98.7283C213.547 98.7283 233.64 118.677 233.875 143.374L235.875 143.355ZM234.968 144.36C235.898 144.273 236.841 144.228 237.794 144.228V142.228C236.778 142.228 235.774 142.276 234.782 142.369L234.968 144.36ZM237.794 144.228C254.316 144.228 267.71 157.622 267.71 174.145H269.71C269.71 156.518 255.421 142.228 237.794 142.228V144.228ZM267.71 174.145C267.71 190.099 255.222 203.137 239.488 204.015L239.6 206.011C256.387 205.075 269.71 191.166 269.71 174.145H267.71ZM240.544 205.062V205.013H238.544V205.062H240.544ZM237.794 206.062H239.544V204.062H237.794V206.062ZM70.3771 206.062H237.794V204.062H70.3771V206.062ZM65.7105 206.062H70.3771V204.062H65.7105V206.062ZM64.7105 204.862V205.062H66.7105V204.862H64.7105ZM15.7104 151.395C15.7104 179.986 37.6579 203.449 65.6246 205.858L65.7963 203.865C38.8547 201.545 17.7104 178.939 17.7104 151.395H15.7104ZM70.3771 96.7283C40.1855 96.7283 15.7104 121.203 15.7104 151.395H17.7104C17.7104 122.308 41.2901 98.7283 70.3771 98.7283V96.7283ZM83.0084 98.1951C78.9529 97.2358 74.7236 96.7283 70.3771 96.7283V98.7283C74.5675 98.7283 78.6423 99.2175 82.548 100.141L83.0084 98.1951ZM131.044 61.7283C107.638 61.7283 87.9054 77.4431 81.8162 98.8952L83.7402 99.4414C89.5917 78.8267 108.556 63.7283 131.044 63.7283V61.7283Z"
-                              fill="url(#paint2_linear_105_2786)" mask="url(#path-2-inside-1_105_2786)" />
+                              d="M179.183 98.7316L178.224 99.0134L178.485 99.902L179.391 99.7098L179.183 98.7316ZM234.875 143.364L233.875 143.374L233.885 144.461L234.968 144.36L234.875 143.364ZM239.544 205.013L239.488 204.014L238.544 204.067V205.013H239.544ZM239.544 205.061V206.061H240.544V205.061H239.544ZM65.7104 205.061H64.7104V206.061H65.7104V205.061ZM65.7104 204.861H66.7104V203.944L65.7963 203.865L65.7104 204.861ZM82.7782 99.168L82.548 100.141L83.479 100.361L83.7402 99.441L82.7782 99.168ZM180.143 98.4498C173.909 77.2259 154.287 61.728 131.044 61.728V63.728C153.376 63.728 172.233 78.6178 178.224 99.0134L180.143 98.4498ZM188.794 96.728C185.428 96.728 182.143 97.0814 178.976 97.7534L179.391 99.7098C182.423 99.0666 185.568 98.728 188.794 98.728V96.728ZM235.875 143.354C235.63 117.561 214.645 96.728 188.794 96.728V98.728C213.547 98.728 233.64 118.676 233.875 143.374L235.875 143.354ZM234.968 144.36C235.898 144.273 236.841 144.228 237.794 144.228V142.228C236.778 142.228 235.774 142.275 234.782 142.368L234.968 144.36ZM237.794 144.228C254.316 144.228 267.71 157.622 267.71 174.145H269.71C269.71 156.518 255.421 142.228 237.794 142.228V144.228ZM267.71 174.145C267.71 190.099 255.222 203.136 239.488 204.014L239.6 206.011C256.387 205.074 269.71 191.166 269.71 174.145H267.71ZM240.544 205.061V205.013H238.544V205.061H240.544ZM237.794 206.061H239.544V204.061H237.794V206.061ZM70.3771 206.061H237.794V204.061H70.3771V206.061ZM65.7104 206.061H70.3771V204.061H65.7104V206.061ZM64.7104 204.861V205.061H66.7104V204.861H64.7104ZM15.7104 151.395C15.7104 179.985 37.6579 203.449 65.6246 205.858L65.7963 203.865C38.8547 201.544 17.7104 178.938 17.7104 151.395H15.7104ZM70.3771 96.728C40.1855 96.728 15.7104 121.203 15.7104 151.395H17.7104C17.7104 122.308 41.2901 98.728 70.3771 98.728V96.728ZM83.0084 98.1948C78.9529 97.2355 74.7236 96.728 70.3771 96.728V98.728C74.5675 98.728 78.6423 99.2172 82.548 100.141L83.0084 98.1948ZM131.044 61.728C107.638 61.728 87.9054 77.4428 81.8162 98.8949L83.7402 99.441C89.5917 78.8264 108.556 63.728 131.044 63.728V61.728Z"
+                              fill="url(#paint3_linear_105_2786)" mask="url(#path-2-inside-1_105_2786)" />
                           </g>
                           <path
-                            d="M160.996 207.412C160.556 208.944 160.541 210.489 160.973 212.036C161.404 213.584 162.182 214.96 163.334 216.138C164.486 217.315 165.851 218.139 167.451 218.597C169.051 219.056 170.662 219.086 172.28 218.703C173.863 218.333 175.314 217.57 176.491 216.486C177.681 215.386 178.5 214.089 178.939 212.557C179.226 211.558 179.272 210.292 179.066 208.737C178.861 207.182 178.506 205.693 177.997 204.286C177.512 203.119 176.918 201.814 176.211 200.386C175.503 198.957 174.198 196.691 173.9 196.173L171.082 197.69C169.729 198.383 168.367 199.236 167.009 200.27C165.651 201.304 164.385 202.473 163.228 203.781C162.037 205.079 161.316 206.296 160.996 207.412Z"
-                            fill="white" />
+                            d="M160.996 207.411C160.556 208.943 160.541 210.489 160.973 212.036C161.404 213.583 162.182 214.96 163.334 216.137C164.486 217.314 165.851 218.138 167.451 218.597C169.051 219.056 170.662 219.085 172.28 218.702C173.863 218.333 175.314 217.569 176.491 216.486C177.681 215.386 178.5 214.089 178.939 212.557C179.226 211.558 179.272 210.291 179.066 208.737C178.861 207.182 178.506 205.693 177.997 204.285C177.512 203.119 176.918 201.814 176.211 200.385C175.503 198.957 174.198 196.691 173.9 196.173L171.082 197.689C169.729 198.382 168.367 199.235 167.009 200.27C165.651 201.304 164.385 202.473 163.228 203.781C162.037 205.079 161.316 206.296 160.996 207.411Z"
+                            fill="url(#paint4_linear_105_2786)" />
                           <path
-                            d="M125.996 207.411C125.556 208.943 125.541 210.489 125.973 212.036C126.404 213.584 127.182 214.96 128.334 216.137C129.486 217.315 130.851 218.138 132.451 218.597C134.051 219.056 135.662 219.086 137.28 218.703C138.863 218.333 140.314 217.569 141.491 216.486C142.681 215.386 143.5 214.089 143.939 212.557C144.226 211.558 144.272 210.292 144.066 208.737C143.861 207.182 143.506 205.693 142.997 204.285C142.512 203.119 141.918 201.814 141.211 200.385C140.503 198.957 139.198 196.691 138.9 196.173L136.082 197.689C134.729 198.383 133.367 199.235 132.009 200.27C130.651 201.304 129.385 202.473 128.228 203.781C127.037 205.079 126.316 206.296 125.996 207.411Z"
-                            fill="white" />
+                            d="M125.996 207.411C125.556 208.943 125.541 210.489 125.973 212.036C126.404 213.583 127.182 214.96 128.334 216.137C129.486 217.314 130.851 218.138 132.451 218.597C134.051 219.056 135.662 219.085 137.28 218.702C138.863 218.333 140.314 217.569 141.491 216.486C142.681 215.386 143.5 214.089 143.939 212.557C144.226 211.558 144.272 210.291 144.066 208.737C143.861 207.182 143.506 205.693 142.997 204.285C142.512 203.119 141.918 201.814 141.211 200.385C140.503 198.957 139.198 196.691 138.9 196.173L136.082 197.689C134.729 198.382 133.367 199.235 132.009 200.27C130.651 201.304 129.385 202.473 128.228 203.781C127.037 205.079 126.316 206.296 125.996 207.411Z"
+                            fill="url(#paint5_linear_105_2786)" />
                           <path
-                            d="M143.496 172.411C143.056 173.943 143.041 175.489 143.473 177.036C143.904 178.584 144.682 179.96 145.834 181.137C146.986 182.315 148.351 183.138 149.951 183.597C151.551 184.056 153.162 184.086 154.78 183.703C156.363 183.333 157.814 182.569 158.991 181.486C160.181 180.386 161 179.089 161.439 177.557C161.726 176.558 161.772 175.292 161.566 173.737C161.361 172.182 161.006 170.693 160.497 169.285C160.012 168.119 159.418 166.814 158.711 165.385C158.003 163.957 156.698 161.691 156.4 161.173L153.582 162.689C152.229 163.383 150.867 164.235 149.509 165.27C148.151 166.304 146.885 167.473 145.728 168.781C144.537 170.079 143.816 171.296 143.496 172.411Z"
-                            fill="white" />
+                            d="M143.496 172.411C143.056 173.943 143.041 175.489 143.473 177.036C143.904 178.583 144.682 179.96 145.834 181.137C146.986 182.314 148.351 183.138 149.951 183.597C151.551 184.056 153.162 184.085 154.78 183.702C156.363 183.333 157.814 182.569 158.991 181.486C160.181 180.386 161 179.089 161.439 177.557C161.726 176.558 161.772 175.291 161.566 173.737C161.361 172.182 161.006 170.693 160.497 169.285C160.012 168.119 159.418 166.814 158.711 165.385C158.003 163.957 156.698 161.691 156.4 161.173L153.582 162.689C152.229 163.382 150.867 164.235 149.509 165.27C148.151 166.304 146.885 167.473 145.728 168.781C144.537 170.079 143.816 171.296 143.496 172.411Z"
+                            fill="url(#paint6_linear_105_2786)" />
                           <path
-                            d="M90.9956 207.412C90.5563 208.944 90.5414 210.489 90.9728 212.036C91.4042 213.584 92.1824 214.96 93.3343 216.138C94.4862 217.315 95.8511 218.139 97.4511 218.597C99.051 219.056 100.662 219.086 102.28 218.703C103.863 218.333 105.314 217.57 106.491 216.486C107.681 215.386 108.5 214.089 108.939 212.557C109.226 211.558 109.272 210.292 109.066 208.737C108.861 207.182 108.506 205.693 107.997 204.286C107.512 203.119 106.918 201.814 106.211 200.386C105.503 198.957 104.198 196.691 103.9 196.173L101.082 197.69C99.7287 198.383 98.367 199.236 97.0092 200.27C95.6514 201.304 94.3853 202.473 93.2283 203.781C92.0368 205.079 91.3155 206.296 90.9956 207.412Z"
-                            fill="white" />
+                            d="M90.9956 207.411C90.5563 208.943 90.5414 210.489 90.9728 212.036C91.4042 213.583 92.1824 214.96 93.3343 216.137C94.4862 217.314 95.8511 218.138 97.4511 218.597C99.051 219.056 100.662 219.085 102.28 218.702C103.863 218.333 105.314 217.569 106.491 216.486C107.681 215.386 108.5 214.089 108.939 212.557C109.226 211.558 109.272 210.291 109.066 208.737C108.861 207.182 108.506 205.693 107.997 204.285C107.512 203.119 106.918 201.814 106.211 200.385C105.503 198.957 104.198 196.691 103.9 196.173L101.082 197.689C99.7287 198.382 98.367 199.235 97.0092 200.27C95.6514 201.304 94.3853 202.473 93.2283 203.781C92.0368 205.079 91.3155 206.296 90.9956 207.411Z"
+                            fill="url(#paint7_linear_105_2786)" />
                           <path
-                            d="M108.496 172.411C108.056 173.943 108.041 175.489 108.473 177.036C108.904 178.584 109.682 179.96 110.834 181.137C111.986 182.315 113.351 183.138 114.951 183.597C116.551 184.056 118.162 184.086 119.78 183.703C121.363 183.333 122.814 182.569 123.991 181.486C125.181 180.386 126 179.089 126.439 177.557C126.726 176.558 126.772 175.292 126.566 173.737C126.361 172.182 126.006 170.693 125.497 169.285C125.012 168.119 124.418 166.814 123.711 165.385C123.003 163.957 121.698 161.691 121.4 161.173L118.582 162.689C117.229 163.383 115.867 164.235 114.509 165.27C113.151 166.304 111.885 167.473 110.728 168.781C109.537 170.079 108.816 171.296 108.496 172.411Z"
-                            fill="white" />
+                            d="M108.496 172.411C108.056 173.943 108.041 175.489 108.473 177.036C108.904 178.583 109.682 179.96 110.834 181.137C111.986 182.314 113.351 183.138 114.951 183.597C116.551 184.056 118.162 184.085 119.78 183.702C121.363 183.333 122.814 182.569 123.991 181.486C125.181 180.386 126 179.089 126.439 177.557C126.726 176.558 126.772 175.291 126.566 173.737C126.361 172.182 126.006 170.693 125.497 169.285C125.012 168.119 124.418 166.814 123.711 165.385C123.003 163.957 121.698 161.691 121.4 161.173L118.582 162.689C117.229 163.382 115.867 164.235 114.509 165.27C113.151 166.304 111.885 167.473 110.728 168.781C109.537 170.079 108.816 171.296 108.496 172.411Z"
+                            fill="url(#paint8_linear_105_2786)" />
                           <defs>
-                            <filter id="filter0_b_105_2786" x="-7.28955" y="38.7283" width="300" height="190.333"
+                            <filter id="filter0_b_105_2786" x="-7.28955" y="38.728" width="300" height="190.333"
                               filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                               <feFlood flood-opacity="0" result="BackgroundImageFix" />
                               <feGaussianBlur in="BackgroundImage" stdDeviation="12" />
@@ -245,21 +251,52 @@
                               <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_105_2786"
                                 result="shape" />
                             </filter>
-                            <linearGradient id="paint0_linear_105_2786" x1="211.544" y1="48.5222" x2="211.544"
+                            <linearGradient id="paint0_linear_105_2786" x1="211.544" y1="48.522" x2="211.544"
                               y2="132.522" gradientUnits="userSpaceOnUse">
                               <stop stop-color="#2F80ED" />
                               <stop offset="1" stop-color="#2D9CDB" />
                             </linearGradient>
-                            <linearGradient id="paint1_linear_105_2786" x1="142.71" y1="62.7283" x2="142.71"
-                              y2="205.062" gradientUnits="userSpaceOnUse">
+                            <linearGradient id="paint1_linear_105_2786" x1="142.71" y1="62.728" x2="142.71" y2="205.061"
+                              gradientUnits="userSpaceOnUse">
                               <stop stop-color="#2F80ED" />
                               <stop offset="1" stop-color="#2D9CDB" />
                             </linearGradient>
-                            <linearGradient id="paint2_linear_105_2786" x1="268.71" y1="62.7283" x2="147.659"
-                              y2="239.691" gradientUnits="userSpaceOnUse">
+                            <radialGradient id="paint2_radial_105_2786" cx="0" cy="0" r="1"
+                              gradientUnits="userSpaceOnUse"
+                              gradientTransform="translate(233.273 85.2641) rotate(138.945) scale(120.096 122.401)">
+                              <stop stop-color="white" />
+                              <stop offset="1" stop-color="white" stop-opacity="0" />
+                            </radialGradient>
+                            <linearGradient id="paint3_linear_105_2786" x1="268.71" y1="62.728" x2="147.659" y2="239.69"
+                              gradientUnits="userSpaceOnUse">
                               <stop offset="0.197917" stop-color="white" />
                               <stop offset="0.609375" stop-color="white" stop-opacity="0" />
                               <stop offset="1" stop-color="white" stop-opacity="0.1" />
+                            </linearGradient>
+                            <linearGradient id="paint4_linear_105_2786" x1="165.003" y1="193.622" x2="185.554"
+                              y2="206.006" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#54CEEC" />
+                              <stop offset="1" stop-color="#599CF6" />
+                            </linearGradient>
+                            <linearGradient id="paint5_linear_105_2786" x1="130.003" y1="193.622" x2="150.554"
+                              y2="206.006" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#54CEEC" />
+                              <stop offset="1" stop-color="#599CF6" />
+                            </linearGradient>
+                            <linearGradient id="paint6_linear_105_2786" x1="147.503" y1="158.622" x2="168.054"
+                              y2="171.006" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#54CEEC" />
+                              <stop offset="1" stop-color="#599CF6" />
+                            </linearGradient>
+                            <linearGradient id="paint7_linear_105_2786" x1="95.003" y1="193.622" x2="115.554"
+                              y2="206.006" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#54CEEC" />
+                              <stop offset="1" stop-color="#599CF6" />
+                            </linearGradient>
+                            <linearGradient id="paint8_linear_105_2786" x1="112.503" y1="158.622" x2="133.054"
+                              y2="171.006" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#54CEEC" />
+                              <stop offset="1" stop-color="#599CF6" />
                             </linearGradient>
                           </defs>
                         </svg></div>
@@ -836,9 +873,9 @@
             <div class="security__pic"></div>
             <div class="security__desc">
               <h2> <span class="security__icon"></span>ВЫ В<br>БЕЗОПАСНОСТИ</h2>
-              <p>Приложение Городских Сервисов – это новый подход к вопросам личной безопасности.<br><br>В специальном
-                разделе вы узнаете информацию о правилах поведения в непредвиденных ситуациях и ЧП, получите
-                рекомендации для их предотвращения</p><a href="#download">Попробовать</a>
+              <p>Приложение Городских Сервисов – это новый подход к вопросам личной безопасности.<br><br>Кнопка
+                безопасности позволит решать экстренные и рисковые ситуации в жизни.</p><a
+                href="#download">Попробовать</a>
             </div>
           </div>
         </div>
@@ -854,9 +891,12 @@
               <h2>Скачайте приложение</h2>
             </div>
             <div class="app__links-wrapper">
-              <div class="app__links"><a class="app__link app__link_appstore" href="#"></a><a
-                  class="app__link app__link_gplay" href="#"></a><a class="app__link app__link_rustore" href="#"></a><a
-                  class="app__link app__link_rumarket" href="#"> </a></div>
+              <div class="app__links">
+                <div class="app__link app__link_appstore" data-action="open-request" data-type="app-store"></div>
+                <div class="app__link app__link_gplay" data-action="open-request" data-type="google-play"></div>
+                <div class="app__link app__link_rustore" data-action="open-request" data-type="ru-store"></div>
+                <div class="app__link app__link_rumarket" data-action="open-request" data-type="ru-market"> </div>
+              </div>
             </div>
           </div>
           <div class="app__pic"><img src="assets/media/app.png" alt="" />
@@ -866,7 +906,40 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="rights"><span>Санкт-Петербург</span><span>2022 г.</span></div>
+      <div class="rights"><span><a href="legacy.docx" style="text-decoration:none;color:#bdbdbd">Политика
+            конфиденциальности</a></span><span>Санкт-Петербург</span><span>2022 г.</span></div>
     </footer>
+    <div class="modal modal_hidden" data-entity="modal-request">
+      <div class="modal__container">
+        <div class="modal__box">
+          <div class="modal__frame" data-entity="modal-content"><button class="modal__close" type="button"
+              data-action="close-modal"><span class="icon icon_close"></span></button>
+            <div class="modal__content">
+              <div class="modal__pic-box">
+                <div class="modal__pic"></div>
+                <div class="modal__icon"><span class="icon icon_hidden icon_apple" data-entity="modal-icon"
+                    data-type="app-store"></span><span class="icon icon_hidden icon_google" data-entity="modal-icon"
+                    data-type="google-play"></span></div>
+              </div>
+              <div class="modal__title">Скачать Beta версию</div>
+              <div class="modal__desc">Приложение находится на стадии beta тестирования. Чтобы получить к нему доступ –
+                укажите своё имя и Email</div>
+              <form class="modal__form"><input type="text" name="username" placeholder="Укажите имя"><input type="email"
+                  name="useremail" placeholder="Укажите Email"><input class="modal__button" type="submit"
+                  value="Скачать"></form>
+            </div>
+          </div>
+          <div class="modal__frame modal__frame_hidden" data-entity="modal-message">
+            <div class="modal__message">
+              <div class="modal__pic-box">
+                <div class="modal__pic"></div>
+              </div>
+              <div class="modal__title">Заявка на получение доступа отправлена</div><button class="modal__button"
+                type="button" data-action="close-modal">Хорошо</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

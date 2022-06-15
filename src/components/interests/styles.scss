@@ -2,7 +2,6 @@
 @import '@template/css/mixins/effects.scss';
 
 .interests {
-
     &__container{
         display: flex;
         flex-direction: column;
@@ -129,23 +128,20 @@
         }
 
         &--5{
-            right: 215px;
-            top: 482px;
+            right: 200px;
+            top: 522px;
             z-index: 2;
 
             @include media(sm) {
                 right: 240px;
-                right: 260px;
             }
 
             @include media(md) {
-                right: 200px;
-
+                right: 185px;
             }
 
             @include media(l) {
-                right: 292px;
-                top: 460px;
+                left: 98px;
             }
         }
     }
@@ -179,9 +175,7 @@
             border-radius: 0px 24px 24px 24px;
             max-width: 420px;
 
-            @media (min-width: 428px) {
-                margin-left: 20px;
-            }
+            margin-left: 20px;
 
             @include media(sm) {
                 margin-left: 64px;
@@ -199,11 +193,7 @@
             background: linear-gradient(71.65deg, #599CF6 13.48%, #5924F1 89.09%), linear-gradient(74.83deg, #FF3D00 0%, #FFB800 93.44%);
             color: #fff;
             text-align: right;
-
-            @media (min-width: 428px) {
             margin-right: 20px;
-                
-            }
 
             @include media(sm) {
                 margin-right: 64px;
@@ -222,7 +212,7 @@
             max-width: 296px;
 
             @include media(l) {
-                max-width: 406px;
+                max-width: 336px;
             }
         }
 
@@ -313,7 +303,6 @@
         background: linear-gradient(108.61deg, #54CEEC 0.21%, #599CF6 99.8%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-transform: uppercase;
         background-clip: text;
         text-fill-color: transparent;
         text-align: center;

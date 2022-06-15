@@ -41,7 +41,7 @@ try {
 
 /***/ }),
 
-/***/ 755:
+/***/ 289:
 /***/ (function(__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -178,15 +178,116 @@ var initRolesSlider = function initRolesSlider() {
 };
 
 /* harmony default export */ var roles_scripts = (initRolesSlider);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
+var slicedToArray = __webpack_require__(324);
+;// CONCATENATED MODULE: ./src/components/app/scripts.js
+
+
+var renderModalIcon = function renderModalIcon(iconElements, state) {
+  iconElements.forEach(function (iconElement) {
+    iconElement.classList.add('icon_hidden');
+
+    if (state === iconElement.dataset.type) {
+      iconElement.classList.remove('icon_hidden');
+    }
+  });
+};
+
+var renderModalVisibility = function renderModalVisibility(modal, state) {
+  if (state === 'shown') {
+    modal.classList.add('modal_shown');
+  }
+
+  if (state === 'hidden') {
+    modal.classList.remove('modal_shown');
+  }
+};
+
+var renderModalMessageVisibility = function renderModalMessageVisibility(_ref, state) {
+  var _ref2 = (0,slicedToArray/* default */.Z)(_ref, 2),
+      modalContentFrame = _ref2[0],
+      modalMessageFrame = _ref2[1];
+
+  if (state === 'shown') {
+    modalContentFrame.classList.add('modal__frame_hidden');
+    modalMessageFrame.classList.remove('modal__frame_hidden');
+  }
+
+  if (state === 'hidden') {
+    modalContentFrame.classList.remove('modal__frame_hidden');
+    modalMessageFrame.classList.add('modal__frame_hidden');
+  }
+};
+
+var initAppLinks = function initAppLinks() {
+  var appLinks = Array.from(document.querySelectorAll('[data-action="open-request"]'));
+  var modal = document.querySelector('[data-entity="modal-request"]');
+  var modalContentFrame = modal.querySelector('[data-entity="modal-content"]');
+  var modalMessageFrame = modal.querySelector('[data-entity="modal-message"]');
+  var modalTogglers = Array.from(modal.querySelectorAll('[data-action="close-modal"]'));
+  var modalIcons = Array.from(modal.querySelectorAll('[data-entity="modal-icon"]'));
+  var state = {
+    storeType: null,
+    modalVisibility: 'hidden',
+    messageVisibility: 'hidden'
+  };
+
+  var openModal = function openModal(appLink) {
+    state.storeType = appLink.dataset.type;
+    state.modalVisibility = 'shown';
+    renderModalVisibility(modal, state.modalVisibility);
+    renderModalIcon(modalIcons, state.storeType);
+  };
+
+  var closeModal = function closeModal() {
+    state.storeType = null;
+    state.modalVisibility = 'hidden';
+    state.messageVisibility = 'hidden';
+    renderModalVisibility(modal, state.modalVisibility);
+    renderModalMessageVisibility([modalContentFrame, modalMessageFrame], state.messageVisibility);
+    renderModalIcon(modalIcons, state.storeType);
+  };
+
+  var showSuccessMessage = function showSuccessMessage() {
+    state.messageVisibility = 'shown';
+    renderModalMessageVisibility([modalContentFrame, modalMessageFrame], state.messageVisibility);
+  };
+
+  var getStoreType = function getStoreType() {
+    return state.storeType;
+  };
+
+  appLinks.forEach(function (appLink) {
+    appLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      openModal(appLink);
+    });
+  });
+  modalTogglers.forEach(function (modalToggler) {
+    modalToggler.addEventListener('click', function (event) {
+      event.preventDefault();
+      closeModal();
+    });
+  });
+  var modalApi = {
+    getStoreType: getStoreType,
+    showSuccessMessage: showSuccessMessage
+  };
+  window.modalRequest = modalApi;
+};
+
+/* harmony default export */ var app_scripts = (initAppLinks);
 // EXTERNAL MODULE: ./src/components/intro/scripts.js
 var intro_scripts = __webpack_require__(186);
 ;// CONCATENATED MODULE: ./src/scripts.js
 
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
   scripts();
   roles_scripts();
+  app_scripts();
 });
 
 /***/ })
@@ -272,6 +373,11 @@ document.addEventListener('DOMContentLoaded', function () {
 /******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
 /******/ 	}();
 /******/ 	
+/******/ 	/* webpack/runtime/runtimeId */
+/******/ 	!function() {
+/******/ 		__webpack_require__.j = 878;
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	!function() {
 /******/ 		// no baseURI
@@ -332,7 +438,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [216], function() { return __webpack_require__(755); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [216], function() { return __webpack_require__(289); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
