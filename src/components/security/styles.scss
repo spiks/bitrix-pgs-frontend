@@ -15,24 +15,49 @@
     flex-shrink: 0;
     width: 100%;
     height: 350px;
+    position: relative;
     margin-bottom: 80px;
-    background-image: url(../../assets/media/secutity.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
 
     @include media(sm) {
       height: 500px;
-      background-position: center;
-      background-size: auto 100%;
     }
 
     @include media(md) {
       width: 50%;
       height: 490px;
     }
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 58%;
+      height: 1106px;
+      transform: translate(-50%, -50%);
+      width: 780px;
+
+      background-image: url(../../assets/media/security--2.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include media(sm) {
+        width: 1170px;
+      }
+  
+      @include media(md) {
+        top: 68%;
+        left: 60%;
+      }
+    }
+
+
   }
 
   &__desc {
+    position: relative;
+    z-index: 2;
+
     @include media(md) {
       margin-left: 80px;
     }

@@ -146,12 +146,20 @@
             }
 
             &:nth-of-type(3){
-                background: linear-gradient(87.46deg, #FF3D00 1.04%, #FFB800 97.98%);
+                background: linear-gradient(87.46deg, #00C2FF 1.04%, #40D10D 97.98%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 text-fill-color: transparent;
             } 
+
+            &:nth-of-type(4){
+                background: linear-gradient(87.46deg, #FF3D00 1.04%, #FFB800 97.98%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
         }
     }
 

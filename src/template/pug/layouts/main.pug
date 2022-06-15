@@ -12,66 +12,10 @@ html(lang="ru")
     header.header
       .header__container 
         .header__inner
-          a(href="#").header__logo  
+          .header__logo  
             img.header__logo-img(src="../assets/media/temp/logo.svg", alt="") 
           a(href="#download").header__button  
             span  Скачать
 
-
-    section.intro
-      .container.intro__container
-        .intro__inner 
-          .intro__main 
-            h2.intro__title Приложение городских сервисов
-            .intro__desc 
-              p.intro__text Мобильное приложение, которое объединяет в себе все городские <br> <span>сервисы</span>,  <span>места</span> и <span>события</span>
-            a(href="#download").button.intro__button
-              span Скачать          
-          .intro__img-wrapper 
-            img.intro__img(src="../assets/media/temp/intro-main.png", alt="")
-            img.intro__bg(src="../assets/media/temp/intro-bg.png", alt="")
-        a(href="#interests").intro__scroll
-          .intro__scroll-text Подробнее 
-          img.intro__scroll-icon(src="../assets/media/temp/scroll-icon.svg", alt="")
-
-    section#interests.interests(data-entity="frame" data-page-index="1")
-      .container.interests__container
-        .interests__inner 
-          .interests__dialog 
-            img(src="../assets/media/temp/interests-bg.png", alt="").interests__dialog-bg
-            img(src="../assets/media/temp/icons/emoji-1.png", alt="").interests__dialog-emoji.interests__dialog-emoji--1
-            img(src="../assets/media/temp/icons/emoji-2.png", alt="").interests__dialog-emoji.interests__dialog-emoji--2
-            img(src="../assets/media/temp/icons/emoji-3.png", alt="").interests__dialog-emoji.interests__dialog-emoji--3
-            img(src="../assets/media/temp/icons/emoji-4.png", alt="").interests__dialog-emoji.interests__dialog-emoji--4
-            img(src="../assets/media/temp/icons/emoji-5.png", alt="").interests__dialog-emoji.interests__dialog-emoji--5
-            .interests__dialog-content 
-              .interests__message 
-                p.interests__message-text Где можно <br> припарковаться?
-              .interests__message 
-                .interests__message-title
-                  img(src="../assets/media/temp/icons/message-icon--1.svg", alt="").interests__message-icon 
-                  p.interests__message-text Парковки СПб
-                .interests__message-content
-                  a(href="#").interests__message-link Установить
-              .interests__message 
-                .interests__message-content
-                  p.interests__message-text Как получить разрешение <br> на съёмку с дрона?
-              .interests__message 
-                .interests__message-title 
-                  img(src="../assets/media/temp/icons/message-icon--2.svg", alt="").interests__message-icon 
-                  p.interests__message-text Клуб пилотирования
-                .interests__message-content
-                  p.interests__message-text.interests__message-text--sm Вы можете обратиться за помощью к участникам сообщества
-                  a(href="#").interests__message-link Перейти в клуб
-              .interests__message 
-                .interests__message-content
-                  p.interests__message-text В каком году закончится дождь?
-          .interests__main 
-            h2.interests__title Ваши интересы – это важно
-            p.interests__desc Приложение учитывает ваши интересы и потребности. Благодаря умным подсказкам решать сложные вопросы становится просто. 
-
-            a(href="#download").button.interests__button 
-              span Попробовать
-      
 
     block body  

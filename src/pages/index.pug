@@ -12,7 +12,7 @@ block body
   .pagination(data-entity="navbar")
     .pagination__items
       .pagination__item
-        button.pagination__button(type="button" data-entity="navbar-button")
+        button.pagination__button.pagination__button_active(type="button" data-entity="navbar-button")
         span.pagination__label 01
       .pagination__item
         button.pagination__button(type="button" data-entity="navbar-button")
@@ -21,7 +21,7 @@ block body
         button.pagination__button(type="button" data-entity="navbar-button")
         span.pagination__label 03
       .pagination__item
-        button.pagination__button.pagination__button_active(type="button" data-entity="navbar-button")
+        button.pagination__button(type="button" data-entity="navbar-button")
         span.pagination__label 04
       .pagination__item
         button.pagination__button(type="button" data-entity="navbar-button")
@@ -30,13 +30,68 @@ block body
         button.pagination__button(type="button" data-entity="navbar-button")
         span.pagination__label 06                        
 
+
+  section.intro(data-entity="frame" data-page-index="0")
+    .container.intro__container
+      .intro__inner 
+        .intro__main 
+          h2.intro__title Приложение городских сервисов
+          .intro__desc 
+            p.intro__text Мобильное приложение, которое объединит в себе все городские <br> <span>сервисы</span>, <span>места</span>, <span>события</span> и <span>новости</span>
+          a(href="#download").button.intro__button
+            span Скачать          
+        .intro__img-wrapper 
+          img.intro__img(src="../assets/media/temp/intro-main.png", alt="")
+          img.intro__bg(src="../assets/media/temp/intro-bg.png", alt="")
+      a(href="#interests").intro__scroll
+        .intro__scroll-text Подробнее 
+        img.intro__scroll-icon(src="../assets/media/temp/scroll-icon.svg", alt="")
+
+  section#interests.interests(data-entity="frame" data-page-index="1")
+    .container.interests__container
+      .interests__inner 
+        .interests__dialog 
+          img(src="../assets/media/temp/interests-bg.png", alt="").interests__dialog-bg
+          img(src="../assets/media/temp/icons/emoji-1.png", alt="").interests__dialog-emoji.interests__dialog-emoji--1
+          img(src="../assets/media/temp/icons/emoji-2.png", alt="").interests__dialog-emoji.interests__dialog-emoji--2
+          img(src="../assets/media/temp/icons/emoji-3.png", alt="").interests__dialog-emoji.interests__dialog-emoji--3
+          img(src="../assets/media/temp/icons/emoji-4.png", alt="").interests__dialog-emoji.interests__dialog-emoji--4
+          img(src="../assets/media/temp/icons/emoji-5.png", alt="").interests__dialog-emoji.interests__dialog-emoji--5
+          .interests__dialog-content 
+            .interests__message 
+              p.interests__message-text Где можно <br> припарковаться?
+            .interests__message 
+              .interests__message-title
+                img(src="../assets/media/temp/icons/message-icon--1.svg", alt="").interests__message-icon 
+                p.interests__message-text Парковки СПб
+              .interests__message-content
+                a(href="#download").interests__message-link Установить
+            .interests__message 
+              .interests__message-content
+                p.interests__message-text Куда пойти вечером?
+            .interests__message 
+              .interests__message-title 
+                img(src="../assets/media/temp/icons/message-icon--3.svg", alt="").interests__message-icon 
+                p.interests__message-text Культура Петербурга
+              .interests__message-content
+                p.interests__message-text.interests__message-text--sm Информационное пространство, рассказывающее о многообразии событий в городе
+            .interests__message 
+              .interests__message-content
+                p.interests__message-text Где найти нужную книгу?
+        .interests__main 
+          h2.interests__title Ваши интересы – это важно
+          p.interests__desc Приложение учитывает ваши интересы и потребности. Благодаря умным подсказкам решать сложные вопросы становится просто. 
+
+          a(href="#download").button.interests__button 
+            span Попробовать
+    
   section.frame(data-entity="frame" data-page-index="2")
     .frame__container
       .frame__title
-        h2 Управлять жизнью легко
+        h2 Решать вопросы быстро
 
       .frame__desc
-        p Выбирайте подходящие роли, чтобы получить быстрый и удобный доступ к необходимым сервисам.
+        p Городской поисковик нового типа для решения актуальных жизненных задач. Выбирайте подходящие роли, чтобы получить быстрый и удобный доступ к необходимым сервисам.
 
 
       .frame__content
@@ -598,7 +653,7 @@ block body
               | Приложение Городских Сервисов – это новый подход к вопросам личной безопасности.
               br
               br
-              | В специальном разделе вы узнаете информацию о правилах поведения в непредвиденных ситуациях и ЧП, получите рекомендации для их предотвращения
+              | Кнопка безопасности позволит решать экстренные и рисковые ситуации в жизни.
 
             a(href="#download") Попробовать
 
