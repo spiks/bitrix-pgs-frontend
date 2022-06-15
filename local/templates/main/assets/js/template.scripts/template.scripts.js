@@ -219,6 +219,10 @@ var renderModalMessageVisibility = function renderModalMessageVisibility(_ref, s
   }
 };
 
+var renderModalTypeField = function renderModalTypeField(field, state) {
+  field.value = state || '';
+};
+
 var initAppLinks = function initAppLinks() {
   var appLinks = Array.from(document.querySelectorAll('[data-action="open-request"]'));
   var modal = document.querySelector('[data-entity="modal-request"]');
@@ -226,6 +230,7 @@ var initAppLinks = function initAppLinks() {
   var modalMessageFrame = modal.querySelector('[data-entity="modal-message"]');
   var modalTogglers = Array.from(modal.querySelectorAll('[data-action="close-modal"]'));
   var modalIcons = Array.from(modal.querySelectorAll('[data-entity="modal-icon"]'));
+  var modalStoreTypeField = modal.querySelector('[data-entity="store-type"]');
   var state = {
     storeType: null,
     modalVisibility: 'hidden',
@@ -237,6 +242,7 @@ var initAppLinks = function initAppLinks() {
     state.modalVisibility = 'shown';
     renderModalVisibility(modal, state.modalVisibility);
     renderModalIcon(modalIcons, state.storeType);
+    renderModalTypeField(modalStoreTypeField, state.storeType);
   };
 
   var closeModal = function closeModal() {
@@ -246,6 +252,7 @@ var initAppLinks = function initAppLinks() {
     renderModalVisibility(modal, state.modalVisibility);
     renderModalMessageVisibility([modalContentFrame, modalMessageFrame], state.messageVisibility);
     renderModalIcon(modalIcons, state.storeType);
+    renderModalTypeField(modalStoreTypeField, state.storeType);
   };
 
   var showSuccessMessage = function showSuccessMessage() {

@@ -30,6 +30,10 @@ const renderModalMessageVisibility = ([modalContentFrame, modalMessageFrame], st
   }
 };
 
+const renderModalTypeField = (field, state) => {
+  field.value = state || '';
+};
+
 const initAppLinks = () => {
   const appLinks = Array.from(document.querySelectorAll('[data-action="open-request"]'));
   const modal = document.querySelector('[data-entity="modal-request"]');
@@ -37,6 +41,7 @@ const initAppLinks = () => {
   const modalMessageFrame = modal.querySelector('[data-entity="modal-message"]');
   const modalTogglers = Array.from(modal.querySelectorAll('[data-action="close-modal"]'));
   const modalIcons = Array.from(modal.querySelectorAll('[data-entity="modal-icon"]'));
+  const modalStoreTypeField = modal.querySelector('[data-entity="store-type"]');
 
   const state = {
     storeType: null,
@@ -50,6 +55,7 @@ const initAppLinks = () => {
 
     renderModalVisibility(modal, state.modalVisibility);
     renderModalIcon(modalIcons, state.storeType);
+    renderModalTypeField(modalStoreTypeField, state.storeType);
   };
 
   const closeModal = () => {
@@ -60,6 +66,7 @@ const initAppLinks = () => {
     renderModalVisibility(modal, state.modalVisibility);
     renderModalMessageVisibility([modalContentFrame, modalMessageFrame], state.messageVisibility);
     renderModalIcon(modalIcons, state.storeType);
+    renderModalTypeField(modalStoreTypeField, state.storeType);
   };
 
   const showSuccessMessage = () => {

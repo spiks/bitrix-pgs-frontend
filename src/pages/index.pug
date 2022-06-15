@@ -735,6 +735,7 @@ block body
             form.modal__form
               input(type="text", name="username" placeholder="Укажите имя")
               input(type="email", name="useremail" placeholder="Укажите Email")
+              input(type="hidden" name="storetype"  data-entity="store-type")
               input(type="submit" value="Скачать").modal__button
 
         .modal__frame.modal__frame_hidden(data-entity="modal-message")
