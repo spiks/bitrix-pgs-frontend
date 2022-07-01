@@ -145,13 +145,13 @@ var RolesSlider = /*#__PURE__*/function () {
       var navPrevButton = this.slider.querySelector('[data-entity="roles-slider-prev"]');
       var navNextButton = this.slider.querySelector('[data-entity="roles-slider-next"]');
       var navSlider = new swiper_bundle_esm/* default */.Z(this.nav, {
-        centeredSlides: true,
         direction: 'horizontal',
         slidesPerView: 'auto',
         observer: true,
         breakpoints: {
           1024: {
-            direction: 'vertical'
+            direction: 'vertical',
+            loop: true
           }
         }
       });

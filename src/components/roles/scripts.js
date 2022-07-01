@@ -13,7 +13,6 @@ class RolesSlider {
     const navNextButton = this.slider.querySelector('[data-entity="roles-slider-next"]');
 
     const navSlider = new Swiper(this.nav, {
-      centeredSlides: true,
       direction: 'horizontal',
       slidesPerView: 'auto',
       observer: true,
@@ -21,6 +20,7 @@ class RolesSlider {
       breakpoints: {
         1024: {
           direction: 'vertical',
+          loop: true,
         },
       },
     });
